@@ -17,6 +17,7 @@
 		5CDC472522908F45005EA026 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC472422908F45005EA026 /* StoryboardInitializable.swift */; };
 		5CDC4729229090C5005EA026 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC4728229090C5005EA026 /* Repository.swift */; };
 		5CDC472B229092AE005EA026 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC472A229092AE005EA026 /* GitHubService.swift */; };
+		5CDC472D22909830005EA026 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC472C22909830005EA026 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5CDC472422908F45005EA026 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		5CDC4728229090C5005EA026 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		5CDC472A229092AE005EA026 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		5CDC472C22909830005EA026 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7EF96508986C010557BE53C7 /* Pods_MostStarted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MostStarted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CECB8FACD043B169915369 /* Pods-MostStarted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MostStarted.debug.xcconfig"; path = "Target Support Files/Pods-MostStarted/Pods-MostStarted.debug.xcconfig"; sourceTree = "<group>"; };
 		CEC5737C5F23F503A314A066 /* Pods-MostStarted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MostStarted.release.xcconfig"; path = "Target Support Files/Pods-MostStarted/Pods-MostStarted.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		5C40041F228E09C600AADD2A /* MostStarted */ = {
 			isa = PBXGroup;
 			children = (
-				5C48C2FD228F066200627BFF /* AppDelegate */,
+				5C48C2FD228F066200627BFF /* App */,
 				5CDC471E229078ED005EA026 /* Base */,
 				5CDC472622909084005EA026 /* Model */,
 				5CDC472722909099005EA026 /* Network */,
@@ -98,12 +100,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5C48C2FD228F066200627BFF /* AppDelegate */ = {
+		5C48C2FD228F066200627BFF /* App */ = {
 			isa = PBXGroup;
 			children = (
 				5C400420228E09C600AADD2A /* AppDelegate.swift */,
+				5CDC472C22909830005EA026 /* AppCoordinator.swift */,
 			);
-			path = AppDelegate;
+			path = App;
 			sourceTree = "<group>";
 		};
 		5CDC471E229078ED005EA026 /* Base */ = {
@@ -155,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C40042F228E09C800AADD2A /* Build configuration list for PBXNativeTarget "MostStarted" */;
 			buildPhases = (
+				5C3246472290A54D00595153 /* ShellScript */,
 				77A71C12664A586FC25F3162 /* [CP] Check Pods Manifest.lock */,
 				5C400419228E09C600AADD2A /* Sources */,
 				5C40041A228E09C600AADD2A /* Frameworks */,
@@ -243,6 +247,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MostStarted/Pods-MostStarted-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5C3246472290A54D00595153 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		77A71C12664A586FC25F3162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +299,7 @@
 				5CDC472522908F45005EA026 /* StoryboardInitializable.swift in Sources */,
 				5CDC472B229092AE005EA026 /* GitHubService.swift in Sources */,
 				5CDC472022907AEA005EA026 /* BaseCordinator.swift in Sources */,
+				5CDC472D22909830005EA026 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

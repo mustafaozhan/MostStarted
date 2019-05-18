@@ -1,5 +1,5 @@
 //
-//  BaseCordinator.swift
+//  BaseCoordinator.swift
 //  MostStarted
 //
 //  Created by Mustafa Ozhan on 18/05/2019.
@@ -9,27 +9,27 @@
 import Foundation
 import RxSwift
 
-class BaseCordinator<ResultType> {
+class BaseCoordinator<ResultType> {
     
-    typealias CordinatonResult = ResultType
+    typealias CoordinatonResult = ResultType
     
     let disposeBag = DisposeBag()
     
     private let identifer = UUID()
-    private var childCordinators = [UUID: Any]()
+    private var childCoordinators = [UUID: Any]()
     
-    private func store<T>(cordinator: BaseCordinator<T>){
-        childCordinators[cordinator.identifer] = cordinator
+    private func store<T>(coordinator: BaseCoordinator<T>) {
+        childCoordinators[coordinator.identifer] = coordinator
     }
     
-    private func free<T>(cordinator: BaseCordinator<T>){
-        childCordinators[cordinator.identifer] = nil
+    private func free<T>(coordinator: BaseCoordinator<T>) {
+        childCoordinators[coordinator.identifer] = nil
     }
     
-    func cordinate<T>(to cordinator: BaseCordinator<T>) -> Observable<T> {
-        store(cordinator: cordinator)
-        return cordinator.start()
-            .do(onNext: {[weak self] _ in self?.free(cordinator: cordinator)})
+    func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
+        store(coordinator: coordinator)
+        return coordinator.start()
+            .do(onNext: {[weak self] _ in self?.free(coordinator: coordinator)})
     }
     
     func start() -> Observable<ResultType> {

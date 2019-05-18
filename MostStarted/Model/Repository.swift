@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Repository{
+struct Repository {
     let fullName: String
     let description: String
     let starsCount: Int
     let url: String
 }
 
-extension Repository{
+extension Repository {
     init?(from json: [String: Any]) {
         guard
             let fullName = json["full_name"] as? String,
