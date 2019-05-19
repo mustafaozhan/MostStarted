@@ -23,7 +23,7 @@ class MainViewModel {
     let title: Observable<String>
     let alertMessage: Observable<String>
     let showRepository: Observable<URL>
-    let showLanguageList: Observable<Void>
+    let showLanguages: Observable<Void>
     
     init(initialLanguage: String, gitHubService: GitHubService = GitHubService()) {
         
@@ -56,7 +56,7 @@ class MainViewModel {
         
         let chooseLanguage = PublishSubject<Void>()
         self.chooseLanguage = chooseLanguage.asObserver()
-        self.showLanguageList = chooseLanguage.asObservable()
+        self.showLanguages = chooseLanguage.asObservable()
         
     }
     
