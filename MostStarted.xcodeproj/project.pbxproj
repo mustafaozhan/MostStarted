@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		288435938FD4E15BB7B2C6F7 /* Pods_MostStarted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF96508986C010557BE53C7 /* Pods_MostStarted.framework */; };
+		5C17C0902291454800A493BD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17C08F2291454800A493BD /* MainCoordinator.swift */; };
+		5C1A553822915662006DE326 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A553722915662006DE326 /* RepositoryViewModel.swift */; };
+		5C1A553A22915759006DE326 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A553922915759006DE326 /* RepositoryCell.swift */; };
 		5C400421228E09C600AADD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C400420228E09C600AADD2A /* AppDelegate.swift */; };
-		5C400423228E09C600AADD2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C400422228E09C600AADD2A /* ViewController.swift */; };
-		5C400426228E09C600AADD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C400424228E09C600AADD2A /* Main.storyboard */; };
+		5C400423228E09C600AADD2A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C400422228E09C600AADD2A /* MainViewController.swift */; };
+		5C400426228E09C600AADD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C400424228E09C600AADD2A /* Main.storyboard */; settings = {ASSET_TAGS = (MainViewController, ); }; };
 		5C400428228E09C800AADD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C400427228E09C800AADD2A /* Assets.xcassets */; };
 		5C40042B228E09C800AADD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C400429228E09C800AADD2A /* LaunchScreen.storyboard */; };
 		5CDC472022907AEA005EA026 /* BaseCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC471F22907AEA005EA026 /* BaseCordinator.swift */; };
@@ -21,9 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C17C08F2291454800A493BD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5C1A553722915662006DE326 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		5C1A553922915759006DE326 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		5C40041D228E09C600AADD2A /* MostStarted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MostStarted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C400420228E09C600AADD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C400422228E09C600AADD2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C400422228E09C600AADD2A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5C400425228E09C600AADD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C400427228E09C800AADD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C40042A228E09C800AADD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C1A553622915640006DE326 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A553722915662006DE326 /* RepositoryViewModel.swift */,
+				5C1A553922915759006DE326 /* RepositoryCell.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		5C400414228E09C600AADD2A = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +88,10 @@
 			children = (
 				5C48C2FD228F066200627BFF /* App */,
 				5CDC471E229078ED005EA026 /* Base */,
+				5C48C2FB228F063700627BFF /* Main */,
 				5CDC472622909084005EA026 /* Model */,
 				5CDC472722909099005EA026 /* Network */,
 				5C48C2FC228F064900627BFF /* Resources */,
-				5C48C2FB228F063700627BFF /* Main */,
 			);
 			path = MostStarted;
 			sourceTree = "<group>";
@@ -84,7 +99,9 @@
 		5C48C2FB228F063700627BFF /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5C400422228E09C600AADD2A /* ViewController.swift */,
+				5C1A553622915640006DE326 /* Repository */,
+				5C400422228E09C600AADD2A /* MainViewController.swift */,
+				5C17C08F2291454800A493BD /* MainCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -180,6 +197,9 @@
 		5C400415228E09C600AADD2A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					MainViewController,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Mustafa Ozhan";
@@ -293,10 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C400423228E09C600AADD2A /* ViewController.swift in Sources */,
+				5C400423228E09C600AADD2A /* MainViewController.swift in Sources */,
+				5C17C0902291454800A493BD /* MainCoordinator.swift in Sources */,
 				5C400421228E09C600AADD2A /* AppDelegate.swift in Sources */,
 				5CDC4729229090C5005EA026 /* Repository.swift in Sources */,
 				5CDC472522908F45005EA026 /* StoryboardInitializable.swift in Sources */,
+				5C1A553A22915759006DE326 /* RepositoryCell.swift in Sources */,
+				5C1A553822915662006DE326 /* RepositoryViewModel.swift in Sources */,
 				5CDC472B229092AE005EA026 /* GitHubService.swift in Sources */,
 				5CDC472022907AEA005EA026 /* BaseCordinator.swift in Sources */,
 				5CDC472D22909830005EA026 /* AppCoordinator.swift in Sources */,

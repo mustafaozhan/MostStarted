@@ -20,6 +20,6 @@ extension StoryboardInitializable where Self: UIViewController {
     
     static func initFromStoryboard(name: String = "Main") -> Self {
         let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
-        return storyboard.instantiateViewController(withIdentifier: storyboardIdentifer) as Self
+        return storyboard.instantiateViewController(withIdentifier: storyboardIdentifer) as! Self
     }
 }

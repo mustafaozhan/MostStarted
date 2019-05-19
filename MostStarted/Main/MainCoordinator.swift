@@ -1,15 +1,15 @@
 //
-//  AppCoordinator.swift
+//  MainCoordinator.swift
 //  MostStarted
 //
-//  Created by Mustafa Ozhan on 18/05/2019.
+//  Created by Mustafa Ozhan on 19/05/2019.
 //  Copyright © 2019 Mustafa Ozhan. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class AppCoordinator: BaseCoordinator<Void> {
+class MainCoordinator: BaseCoordinator<Void> {
     private let window: UIWindow
     
     init(window: UIWindow) {
@@ -17,7 +17,7 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let mainCoordinator = MainCoordinator(window: window)
-        return coordinate(to: mainCoordinator)
+        // todo
+        return Observable.never()
     }
 }

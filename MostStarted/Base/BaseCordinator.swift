@@ -32,7 +32,7 @@ class BaseCoordinator<ResultType> {
             .do(onNext: {[weak self] _ in self?.free(coordinator: coordinator)})
     }
     
-    func start() -> Observable<ResultType>? {
+    func start() -> Observable<ResultType> {
         fatalError("Start method should be implemented")
     }
     
