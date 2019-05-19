@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 enum LanguagesCoordinationResult {
     case language(String)
@@ -18,5 +19,22 @@ class LanguagesCoordinator: BaseCoordinator<LanguagesCoordinationResult> {
     
     init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController
+    }
+    
+    override func start() -> Observable<CoordinatonResult> {
+        let viewController = LanguagesViewController.initFromStoryboard(name: "Main")
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        let viewModel = LanguagesViewModel()
+        viewController.viewModel = viewModel
+        
+        let cancel = viewModel.didCancel.map { _ in CoordinatonResult.cancel}
+        let language = viewModel.didSelectLanguage.map { CoordinatonResult.language($0) }
+        
+        rootViewController.present(navigationController, animated: true)
+        
+        return Observable.merge(cancel, language)
+            .take(1)
+            .do(onNext: { [weak self] _ in self?.rootViewController.dismiss(animated: true) })
     }
 }

@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class LanguagesViewController: UIViewController {
+class LanguagesViewController: UIViewController, StoryboardInitializable {
 
     @IBOutlet private weak var tableView: UITableView!
+    
+    let disposeBag = DisposeBag()
+    var viewModel: LanguagesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
