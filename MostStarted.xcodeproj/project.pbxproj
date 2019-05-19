@@ -12,9 +12,10 @@
 		5C1A553822915662006DE326 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A553722915662006DE326 /* RepositoryViewModel.swift */; };
 		5C1A553A22915759006DE326 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A553922915759006DE326 /* RepositoryCell.swift */; };
 		5C1A553C22916421006DE326 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A553B22916421006DE326 /* MainViewModel.swift */; };
+		5C1A553F22918EB5006DE326 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A553E22918EB5006DE326 /* LanguagesViewController.swift */; };
 		5C400421228E09C600AADD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C400420228E09C600AADD2A /* AppDelegate.swift */; };
 		5C400423228E09C600AADD2A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C400422228E09C600AADD2A /* MainViewController.swift */; };
-		5C400426228E09C600AADD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C400424228E09C600AADD2A /* Main.storyboard */; settings = {ASSET_TAGS = (MainViewController, ); }; };
+		5C400426228E09C600AADD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C400424228E09C600AADD2A /* Main.storyboard */; };
 		5C400428228E09C800AADD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C400427228E09C800AADD2A /* Assets.xcassets */; };
 		5C40042B228E09C800AADD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C400429228E09C800AADD2A /* LaunchScreen.storyboard */; };
 		5CDC472022907AEA005EA026 /* BaseCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC471F22907AEA005EA026 /* BaseCordinator.swift */; };
@@ -29,6 +30,7 @@
 		5C1A553722915662006DE326 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 		5C1A553922915759006DE326 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		5C1A553B22916421006DE326 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5C1A553E22918EB5006DE326 /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		5C40041D228E09C600AADD2A /* MostStarted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MostStarted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C400420228E09C600AADD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C400422228E09C600AADD2A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		5C1A553D22918E96006DE326 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A553E22918EB5006DE326 /* LanguagesViewController.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
 		5C400414228E09C600AADD2A = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 				5C48C2FD228F066200627BFF /* App */,
 				5CDC471E229078ED005EA026 /* Base */,
 				5C48C2FB228F063700627BFF /* Main */,
+				5C1A553D22918E96006DE326 /* Languages */,
 				5CDC472622909084005EA026 /* Model */,
 				5CDC472722909099005EA026 /* Network */,
 				5C48C2FC228F064900627BFF /* Resources */,
@@ -318,6 +329,7 @@
 			files = (
 				5C400423228E09C600AADD2A /* MainViewController.swift in Sources */,
 				5C17C0902291454800A493BD /* MainCoordinator.swift in Sources */,
+				5C1A553F22918EB5006DE326 /* LanguagesViewController.swift in Sources */,
 				5C400421228E09C600AADD2A /* AppDelegate.swift in Sources */,
 				5CDC4729229090C5005EA026 /* Repository.swift in Sources */,
 				5CDC472522908F45005EA026 /* StoryboardInitializable.swift in Sources */,
